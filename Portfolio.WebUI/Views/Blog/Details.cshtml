@@ -1,34 +1,21 @@
-﻿
+﻿@model BlogPosts
 @{
     ViewData["Title"] = "Blog Details";
 }
 
 
-<nav>
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-tabis" aria-expanded="false"> <span class="tittle">MENU</span> <span class="fa fa-navicon icon-nav" aria-hidden="true"></span> </button>
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="nav-tabis">
-        <ul class="isop-filter nav nav-pills">
-            <li role="presentation" class=""><a asp-controller="Home" asp-action="index"><i class="icon-user"></i> ABOUT ME</a></li>
-            <li role="presentation" class=""><a asp-controller="Resume" asp-action="index"><i class="icon-book-open"></i>RESUME</a></li>
-            <li role="presentation" class=""><a asp-controller="Home" asp-action="Portfolio"><i class="icon-rocket"></i>PORTFOLIO</a></li>
-            <li role="presentation" class="active"><a asp-controller="Blog" asp-action="Index"><i class="icon-note"></i>BLOG</a></li>
-            <li role="presentation"><a asp-controller="Home" asp-action="Contact"> <i class="icon-pencil"></i>CONTACT ME</a></li>
-        </ul>
-    </div>
-</nav>
+
 
 
     <div class="inside-sec blog">
         <!-- BIO AND SKILLS -->
-        <h5 class="tittle">BLOG POST</h5>
+        <h5 class="tittle">@Model.Title</h5>
 
         <!-- Blog -->
         <article class="blog-post width-100 padding-25">
             <div class="post-img">
                 <img src="~/uploads/images/img-1.jpg" alt="">
-                <span class="date-in">27 JAN</span>
+                <span class="date-in">@Model.PublishDate</span>
             </div>
 
             <!-- BLOG DETAIL -->
@@ -41,28 +28,11 @@
                 <li>  </li>
             </ul>
             <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.<br>
-                <br>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
+               
+ @Model.Description
             </p>
-            <blockquote class="margin-top-30">“Sensibus oportere signiferumque id mea. At usu lucilius phaedrum, vix oratio epicurei ne. Eripuit conceptam sea cu, ius minim delectus euripidis cu. Probo nonumy gubergren id nec. In est probo ridens, his laoreet euripidis et.”</blockquote>
-            <h5 class="margin-top-30 margin-bottom-0">1914 translation by H. Rackham</h5>
-            <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures,</p>
-            <div class="row">
-                <div class="col-md-6">
-                    <p>
-                        Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, literature, discovered the undoubtable source. <br>
-                        <br>
-                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words
-                    </p>
-                </div>
-                <div class="col-md-6"><img class="img-responsive margin-top-10" src="~/uploads/images/post-img.jpg" alt=""></div>
-            </div>
-            <p>
-                Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source.<br>
-                <br>
-                There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable.
-            </p>
+            
+            
             <div class="auther-name text-center margin-top-50">
                 <h6 class="font-12px margin-top-20 margin-bottom-10">WHITE SHADOW WALKER</h6>
                 <span class="font-16px font-crimson font-italic">Writer/Personal blog</span>

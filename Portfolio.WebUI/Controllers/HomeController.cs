@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Portfolio.WebUI.Models.DataContext;
+using Portfolio.WebUI.Models.Entity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,13 +11,13 @@ namespace Portfolio.WebUI.Controllers
     public class HomeController : Controller
     {
 
-        //+
-        public IActionResult Index()
+        readonly ResumeDbContext db;
+        public HomeController(ResumeDbContext db)
         {
-            return View();
-        }
+            this.db = db;
 
-        public IActionResult Portfolio()
+        }
+        public IActionResult Index()
         {
             return View();
         }
@@ -24,6 +26,27 @@ namespace Portfolio.WebUI.Controllers
         public IActionResult Contact()
         {
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult Contact(Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Contacts.Add(contact);
+                db.SaveChanges();
+
+                return Json(new
+                {
+                    error = false,
+                    message = "Ugurludur"
+                });
+            }
+            return Json(new
+            {
+                error = true,
+                message = "Yeniden sinayin"
+            });
         }
     }
 }

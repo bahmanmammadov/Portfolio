@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "BMOznizLT+97akSW8TBtF7NF7ixRO+x6JfUhTlSijXkWaPZNMqLzlTt2arObQaejeO5lPc3ROJC50R/ghlfyWw==",
+  "dgSpecHash": "Geq8Nc+mROMf2aHks2yrms5BFPBnYWDU5vr7gWyVVw4Kn8qWJTdQCSC57RGb5DcbQcXDXbW4Gvjx34MzxjlJaQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Lenovo\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+  "projectFilePath": "C:\\Users\\Lenovo\\Desktop\\TestPortfolio\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Lenovo\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\9.0.0\\mediatr.extensions.microsoft.dependencyinjection.9.0.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
     "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\5.0.0\\microsoft.aspnetcore.razor.language.5.0.0.nupkg.sha512",

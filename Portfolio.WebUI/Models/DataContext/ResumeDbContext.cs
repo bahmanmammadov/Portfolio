@@ -19,7 +19,15 @@ namespace Portfolio.WebUI.Models.DataContext
         public DbSet<Contact> Contacts { get; set; }
         public DbSet<BlogPosts> blogposts { get; set; }
         public DbSet<Project> portfolio { get; set; }
+        public DbSet<Experience> experiences { get; set; }
+        public DbSet<Education> Educations { get; set; }
+        public DbSet<Skills> Skillss { get; set; }
+        public DbSet<Bio> Bios { get; set; }
+        public DbSet<Services> Services { get; set; }
+        public DbSet<Icons> Icons { get; set; }
+        public DbSet<PersonalInfo> PersonalInfos { get; set; }
 
+        
 
 
 

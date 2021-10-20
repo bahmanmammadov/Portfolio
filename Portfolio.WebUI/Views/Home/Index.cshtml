@@ -1,4 +1,4 @@
-﻿
+﻿@model IndexViewModel
 @{
     ViewData["Title"] = "About";
 }
@@ -19,34 +19,34 @@
             <!-- Personal Info -->
             <ul class="personal-info">
                 <li>
-                    <p> <span> Name</span> John Doe </p>
+                    <p> <span> Name</span> @Model.PersonalInfos.Name </p>
                 </li>
                 <li>
-                    <p> <span> Age</span> 38 Years </p>
+                    <p> <span> Age</span> @Model.PersonalInfos.Age </p>
                 </li>
                 <li>
-                    <p> <span> Location</span> Rome, Italy </p>
+                    <p> <span> Location</span> @Model.PersonalInfos.Location </p>
                 </li>
                 <li>
-                    <p> <span> Experience</span> 15 Years </p>
+                    <p> <span> Experience</span> @Model.PersonalInfos.Experience </p>
                 </li>
                 <li>
-                    <p> <span> Degree</span> MBA </p>
+                    <p> <span> Degree</span> @Model.PersonalInfos.Degree </p>
                 </li>
                 <li>
-                    <p> <span> Career Level</span> Mid-Level </p>
+                    <p> <span> Career Level</span> @Model.PersonalInfos.CareerLevel </p>
                 </li>
                 <li>
-                    <p> <span> Phone</span> (800) 123-4567 </p>
+                    <p> <span> Phone</span> (800)@Model.PersonalInfos.PhoneNumber </p>
                 </li>
                 <li>
-                    <p> <span> FAX</span> (800) 123-4568 </p>
+                    <p> <span> FAX</span> (800) @Model.PersonalInfos.Fax </p>
                 </li>
                 <li>
-                    <p> <span> E-mail</span> <a href="#."> example@example.com</a> </p>
+                    <p> <span> E-mail</span> <a href="#."> @Model.PersonalInfos.Email</a> </p>
                 </li>
                 <li>
-                    <p> <span> Website</span><a href="#."> example.com </a></p>
+                    <p> <span> Website</span><a href="#."> @Model.PersonalInfos.Website </a></p>
                 </li>
             </ul>
 
@@ -66,74 +66,19 @@
             <div class="row padding-20 margin-top-50">
 
                 <!-- Icon -->
-                <div class="col-md-4 text-center">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-whatsapp" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">WEB DEVELOPMENT</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
+                @foreach (var item in Model.Services)
+                {
+                    <div class="col-md-4 text-center">
+                        <div class="icon-box i-large ib-black">
+                            <div class="ib-icon"> <i class="@item.icons.FirstOrDefault(s=>s.ServicesId==item.ID).Icon" aria-hidden="true"></i> </div>
+                            <div class="ib-info">
+                                <h4 class="h6">@item.Title</h4>
+                                <p>@item.Body</p>
+                            </div>
                         </div>
                     </div>
-                </div>
+                }
 
-                <!-- Icon -->
-                <div class="col-md-4 text-center">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-magic" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">WEB DESIGN</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Icon -->
-                <div class="col-md-4 text-center">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-smile-o" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">RESPONSIVE</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Icon Row -->
-            <div class="row padding-20 margin-bottom-50">
-
-                <!-- Icon -->
-                <div class="col-md-4">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-diamond" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">Unique Design</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Icon -->
-                <div class="col-md-4">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-server" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">Demos Layout</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Icon -->
-                <div class="col-md-4">
-                    <div class="icon-box i-large ib-black">
-                        <div class="ib-icon"> <i class="fa fa-scissors" aria-hidden="true"></i> </div>
-                        <div class="ib-info">
-                            <h4 class="h6">Clean Code</h4>
-                            <p>We have created the new macbook psd version with scalable vector shapes.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
             <!-- Skills -->
@@ -141,83 +86,33 @@
 
             <!-- Sound Engineering -->
             <div class="panel-group accordion padding-20" id="accordion">
-                <div class="panel panel-default">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <!-- PANEL HEADING -->
-                            <div class="panel-heading">
-                                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed"> Photoshop</a> </h4>
-                            </div>
+                @foreach (var item in Model.skills.Where(s => s.IsHardSkill == false))
+                {
+            <div class="panel panel-default">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <!-- PANEL HEADING -->
+                        <div class="panel-heading">
+                            <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion5" href="#collapseOne5"> @item.Name</a> </h4>
+                        </div>
+                    </div>
+
+                    <!-- Skillls Bars -->
+                    <div class="col-sm-8">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: @item.SkillPercentage;"> <span class="sr-only">60% Complete</span> </div>
                         </div>
 
-                        <!-- Skillls Bars -->
-                        <div class="col-sm-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">60% Complete</span> </div>
-                            </div>
-
-                            <!-- Skillls Text -->
-                            <div id="collapseOne" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                </div>
+                        <!-- Skillls Text -->
+                        <div id="collapseOne5" class="panel-collapse collapse in">
+                            <div class="panel-body">
+                                <p>@item.SkillDescription</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>}
 
-                <!-- Business Administration -->
-
-                <div class="panel panel-default">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <!-- PANEL HEADING -->
-                            <div class="panel-heading">
-                                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapsetwo" class="collapsed"> Dreamviewer</a> </h4>
-                            </div>
-                        </div>
-
-                        <!-- Skillls Bars -->
-                        <div class="col-sm-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;"> <span class="sr-only">60% Complete</span> </div>
-                            </div>
-
-                            <!-- Skillls Text -->
-                            <div id="collapsetwo" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- HTML -->
-                <div class="panel panel-default">
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <!-- PANEL HEADING -->
-                            <div class="panel-heading">
-                                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapsethree" class="collapsed"> HTML5/CSS3</a> </h4>
-                            </div>
-                        </div>
-
-                        <!-- Skillls Bars -->
-                        <div class="col-sm-8">
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"> <span class="sr-only">60% Complete</span> </div>
-                            </div>
-
-                            <!-- Skillls Text -->
-                            <div id="collapsethree" class="panel-collapse collapse">
-                                <div class="panel-body">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
     </div>

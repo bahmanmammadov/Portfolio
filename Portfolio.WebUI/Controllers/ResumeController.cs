@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Portfolio.WebUI.Models.DataContext;
+using Portfolio.WebUI.Models.ViewModel;
+using System.Linq;
 
 namespace Portfolio.WebUI.Controllers
 {
@@ -14,7 +16,16 @@ namespace Portfolio.WebUI.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var vm = new ResumeViewModel();
+            vm.Experiences = db.experiences.Where(b => b.DeleteByUserId == null).ToList();
+            vm.Educations = db.Educations.Where(b => b.DeleteByUserId == null).ToList();
+            vm.skills = db.Skillss.Where(b => b.DeleteByUserId == null).ToList();
+
+            vm.bios = db.Bios.FirstOrDefault(c => c.DeleteByUserId == null);
+
+
+
+            return View(vm);
         }
     }
 }

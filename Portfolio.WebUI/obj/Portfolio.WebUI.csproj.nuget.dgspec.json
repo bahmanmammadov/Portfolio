@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lenovo\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj": {}
+    "C:\\Users\\Lenovo\\Desktop\\TestPortfolio\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lenovo\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj": {
+    "C:\\Users\\Lenovo\\Desktop\\TestPortfolio\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lenovo\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+        "projectUniqueName": "C:\\Users\\Lenovo\\Desktop\\TestPortfolio\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
         "projectName": "Portfolio.WebUI",
-        "projectPath": "C:\\Users\\Lenovo\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
+        "projectPath": "C:\\Users\\Lenovo\\Desktop\\TestPortfolio\\Portfolio\\Portfolio.WebUI\\Portfolio.WebUI.csproj",
         "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lenovo\\Portfolio\\Portfolio.WebUI\\obj\\",
+        "outputPath": "C:\\Users\\Lenovo\\Desktop\\TestPortfolio\\Portfolio\\Portfolio.WebUI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[5.0.10, )"
@@ -83,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.207\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.208\\RuntimeIdentifierGraph.json"
         }
       }
     }

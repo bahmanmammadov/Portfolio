@@ -1,10 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Portfolio.WebUI.Models.DataContext;
-using Portfolio.WebUI.Models.Entity;
-using System;
-using System.Collections.Generic;
+using Portfolio.WebUI.Models.ViewModel;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Controllers
 {
@@ -12,6 +11,9 @@ namespace Portfolio.WebUI.Controllers
     {
 
         readonly ResumeDbContext db;
+        readonly IMediator mediator;
+
+
         public HomeController(ResumeDbContext db)
         {
             this.db = db;
@@ -19,7 +21,13 @@ namespace Portfolio.WebUI.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var vm = new IndexViewModel();
+            vm.skills = db.Skillss.Where(b => b.DeleteByUserId == null).ToList();
+            vm.Services = db.Services.Where(b => b.DeleteByUserId == null)
+                .Include(c => c.icons)
+                .ToList();
+            vm.PersonalInfos = db.PersonalInfos.FirstOrDefault(c => c.DeleteByUserId == null);
+            return View(vm);
         }
 
         //+
@@ -27,26 +35,22 @@ namespace Portfolio.WebUI.Controllers
         {
             return View();
         }
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Contact(Contact contact)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Contacts.Add(contact);
-                db.SaveChanges();
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Contact(ContactCreateCommand contact)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        Contact contac = await mediator.Send(contact);
+        //        if (contac == null)
+        //        {
+        //            return NotFound();
+        //        }
 
-                return Json(new
-                {
-                    error = false,
-                    message = "Ugurludur"
-                });
-            }
-            return Json(new
-            {
-                error = true,
-                message = "Yeniden sinayin"
-            });
-        }
-    }
+        //        return View(contac);
+
+        //    }
+
+        //}
+    } 
 }

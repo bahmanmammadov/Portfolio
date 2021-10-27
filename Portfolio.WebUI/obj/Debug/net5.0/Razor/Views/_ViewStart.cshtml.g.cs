@@ -28,13 +28,20 @@ using Portfolio.WebUI.Controllers;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\Lenovo\Desktop\TestPortfolio\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
-using Portfolio.WebUI.Models.ViewModel;
+using Portfolio.WebUI.Model.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Lenovo\Desktop\TestPortfolio\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
+using Portfoliotask.Model.FormModel;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"7091c65830b0329e613be026ede8a57552863778", @"/Views/_ViewStart.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"03d9da9de8f2dcb1fa76cdd8b46428e1d81f3aa2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a9e10accde34f8b2c9452aa4f430366a70541df", @"/Views/_ViewImports.cshtml")]
     public class Views__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

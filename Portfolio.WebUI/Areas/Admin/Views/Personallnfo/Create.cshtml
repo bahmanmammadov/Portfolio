@@ -1,0 +1,96 @@
+﻿@model PersonalInfo
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Creat</h1>
+
+<h4>Edu</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Degree" class="control-label"></label>
+                <input asp-for="Degree" class="form-control" />
+                <span asp-validation-for="Degree" class="text-danger"></span>
+            </div>
+
+
+            <div class="form-group" style="width:450px">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width:450px">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width:450px">
+                <label asp-for="Location" class="control-label"></label>
+                <input asp-for="Location" class="form-control" />
+                <span asp-validation-for="Location" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="width:450px">
+                <label asp-for="Age" class="control-label"></label>
+                <input asp-for="Age" class="form-control" />
+                <span asp-validation-for="Age" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width:450px">
+                <label asp-for="Experience" class="control-label"></label>
+                <input asp-for="Experience" class="form-control" />
+                <span asp-validation-for="Experience" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width:450px">
+                <label asp-for="CareerLevel" class="control-label"></label>
+                <input asp-for="CareerLevel" class="form-control" />
+                <span asp-validation-for="CareerLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group" style="width:450px">
+                <label asp-for="Fax" class="control-label"></label>
+                <input asp-for="Fax" class="form-control" />
+                <span asp-validation-for="Fax" class="text-danger"></span>
+            </div>
+
+            <div class="form-group" style="width:450px">
+                <label asp-for="Website" class="control-label"></label>
+                <input asp-for="Website" class="form-control" />
+                <span asp-validation-for="Website" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@*@section addjs{
+    <script src="~/libs/ckeditor5/ckeditor.js"></script>
+    <script src="~/libs/image-letter-input/image-letter.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            ClassicEditor
+                .create(document.querySelector('#Body'))
+                .catch(error => {
+                    console.error(error);
+                });
+        })
+    </script>
+}
+@section addcss {
+    <link href="~/libs/image-letter-input/StyleSheet.css" rel="stylesheet" />
+}*@
+
+
+

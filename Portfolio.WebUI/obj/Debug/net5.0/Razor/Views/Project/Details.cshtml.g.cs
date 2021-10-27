@@ -28,13 +28,20 @@ using Portfolio.WebUI.Controllers;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\Lenovo\Desktop\TestPortfolio\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
-using Portfolio.WebUI.Models.ViewModel;
+using Portfolio.WebUI.Model.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Lenovo\Desktop\TestPortfolio\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
+using Portfoliotask.Model.FormModel;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8d4f19eae6316b5d595735380ff2f4e5f20625e9", @"/Views/Project/Details.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"03d9da9de8f2dcb1fa76cdd8b46428e1d81f3aa2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a9e10accde34f8b2c9452aa4f430366a70541df", @"/Views/_ViewImports.cshtml")]
     public class Views_Project_Details : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Project>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("alt", new global::Microsoft.AspNetCore.Html.HtmlString(""), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -86,7 +93,7 @@ using Portfolio.WebUI.Models.ViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("\r\n\r\n\r\n\r\n\r\n<div class=\"inside-sec blog\">\r\n    <!-- BIO AND SKILLS -->\r\n    <h5 class=\"tittle\">BLOG POST</h5>\r\n\r\n    <!-- Blog -->\r\n    <article class=\"blog-post width-100 padding-25\">\r\n        <div class=\"post-img\">\r\n            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4f19eae6316b5d595735380ff2f4e5f20625e96197", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4f19eae6316b5d595735380ff2f4e5f20625e96405", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -149,7 +156,7 @@ AddHtmlAttributeValue("", 378, Model.ImagePath, 378, 16, false);
                 </p>
             </div>
             <div class=""col-md-6"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4f19eae6316b5d595735380ff2f4e5f20625e911974", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4f19eae6316b5d595735380ff2f4e5f20625e912182", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -201,7 +208,7 @@ AddHtmlAttributeValue("", 378, Model.ImagePath, 378, 16, false);
                     <div class=""media"">
                         <div class=""media-left"">
                             <div class=""avatar"">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4f19eae6316b5d595735380ff2f4e5f20625e915619", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4f19eae6316b5d595735380ff2f4e5f20625e915827", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -236,7 +243,7 @@ AddHtmlAttributeValue("", 378, Model.ImagePath, 378, 16, false);
                         <div class=""media-left"">
  ");
             WriteLiteral("                           <div class=\"avatar\">");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4f19eae6316b5d595735380ff2f4e5f20625e917857", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "8d4f19eae6316b5d595735380ff2f4e5f20625e918065", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -270,7 +277,7 @@ AddHtmlAttributeValue("", 378, Model.ImagePath, 378, 16, false);
             <!-- Comments Form -->
             <d");
             WriteLiteral("iv class=\"comment-form\">\r\n                <!-- Main Heading -->\r\n                <div class=\"heading-side-bar margin-bottom-50 margin-top-80\">\r\n                    <h4>Post to Reply</h4>\r\n                </div>\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d4f19eae6316b5d595735380ff2f4e5f20625e920288", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8d4f19eae6316b5d595735380ff2f4e5f20625e920496", async() => {
                 WriteLiteral("\r\n                    <ul class=\"row\">\r\n                        <li class=\"col-sm-4\">\r\n                            <label>\r\n                                *NAME\r\n                                <input class=\"form-control\" type=\"text\"");
                 BeginWriteAttribute("placeholder", " placeholder=\"", 9308, "\"", 9322, 0);
                 EndWriteAttribute();

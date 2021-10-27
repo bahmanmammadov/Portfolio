@@ -1,12 +1,11 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Portfolio.WebUI.Models.DataContext;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Portfolio.WebUI.Controllers
 {
+
     public class BlogController : Controller
     {
         readonly ResumeDbContext db;
@@ -14,6 +13,8 @@ namespace Portfolio.WebUI.Controllers
         {
             this.db = db;
         }
+        [AllowAnonymous]
+
         public IActionResult Index()
         {
 

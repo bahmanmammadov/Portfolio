@@ -28,13 +28,20 @@ using Portfolio.WebUI.Controllers;
 #nullable disable
 #nullable restore
 #line 4 "C:\Users\Lenovo\Desktop\TestPortfolio\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
-using Portfolio.WebUI.Models.ViewModel;
+using Portfolio.WebUI.Model.ViewModels;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\Lenovo\Desktop\TestPortfolio\Portfolio\Portfolio.WebUI\Views\_ViewImports.cshtml"
+using Portfoliotask.Model.FormModel;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"58e7243cafc53e2a6b6772c32a999ab55f804a68", @"/Views/Blog/Index.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"03d9da9de8f2dcb1fa76cdd8b46428e1d81f3aa2", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8a9e10accde34f8b2c9452aa4f430366a70541df", @"/Views/_ViewImports.cshtml")]
     public class Views_Blog_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<BlogPosts>>
     {
         private static readonly global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute __tagHelperAttribute_0 = new global::Microsoft.AspNetCore.Razor.TagHelpers.TagHelperAttribute("class", new global::Microsoft.AspNetCore.Html.HtmlString("img-responsive"), global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -99,7 +106,7 @@ using Portfolio.WebUI.Models.ViewModel;
 #line hidden
 #nullable disable
             WriteLiteral("                <article>\r\n                    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "58e7243cafc53e2a6b6772c32a999ab55f804a686069", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("img", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagOnly, "58e7243cafc53e2a6b6772c32a999ab55f804a686277", async() => {
             }
             );
             __Microsoft_AspNetCore_Mvc_Razor_TagHelpers_UrlResolutionTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.Razor.TagHelpers.UrlResolutionTagHelper>();
@@ -132,7 +139,7 @@ AddHtmlAttributeValue("", 547, item.ImagePath, 547, 15, false);
 #line hidden
 #nullable disable
             WriteLiteral("</span> <span class=\"margin-left-15\"><i class=\"icon-user\"></i>Admin</span> <span class=\"margin-left-15\"><i class=\"icon-bubbles\"></i> Featured</span></div>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58e7243cafc53e2a6b6772c32a999ab55f804a688417", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58e7243cafc53e2a6b6772c32a999ab55f804a688625", async() => {
                 WriteLiteral(" ");
 #nullable restore
 #line 26 "C:\Users\Lenovo\Desktop\TestPortfolio\Portfolio\Portfolio.WebUI\Views\Blog\Index.cshtml"
@@ -180,7 +187,7 @@ AddHtmlAttributeValue("", 547, item.ImagePath, 547, 15, false);
 #line hidden
 #nullable disable
             WriteLiteral("</p>\r\n                            ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58e7243cafc53e2a6b6772c32a999ab55f804a6811330", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "58e7243cafc53e2a6b6772c32a999ab55f804a6811538", async() => {
                 WriteLiteral("Read MOre <i class=\"fa fa-angle-right\" aria-hidden=\"true\"></i>");
             }
             );

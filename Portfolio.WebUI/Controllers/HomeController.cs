@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Portfolio.WebUI.Models.DataContext;
@@ -7,6 +8,8 @@ using System.Linq;
 
 namespace Portfolio.WebUI.Controllers
 {
+    [AllowAnonymous]
+
     public class HomeController : Controller
     {
 
